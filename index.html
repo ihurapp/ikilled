@@ -56,27 +56,6 @@
             color: #666;
         }
 
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            background-color: #999999;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease, transform 0.3s ease;
-            margin-bottom: 20px;
-        }
-
-        .button:hover {
-            background-color: #888888;
-            transform: translateY(-2px);
-        }
-
         .gfm-container {
             display: none;
             position: fixed;
@@ -189,7 +168,6 @@
             <span>Unlimited Freedom.</span>
         </h1>
         <p>Coming Soon: Stay Tuned for Updates.</p>
-        <a href="#" class="button" id="donate-btn">Donate</a>
     </div>
     <div class="gfm-container" id="gfm-container">
         <span class="close-btn" id="close-btn">&times;</span>
@@ -200,12 +178,7 @@
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
-        document.getElementById('donate-btn').addEventListener('click', function(event) {
-            event.preventDefault();
-            var gfmContainer = document.getElementById('gfm-container');
-            gfmContainer.style.display = 'block';
-        });
-
+        // Removed the event listener for the donate button as it's no longer needed
         document.getElementById('close-btn').addEventListener('click', function() {
             var gfmContainer = document.getElementById('gfm-container');
             gfmContainer.style.display = 'none';
