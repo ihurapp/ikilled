@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ikilled.com</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
         body, html {
             height: 100%;
@@ -53,6 +54,27 @@
             font-size: 18px;
             margin-bottom: 40px;
             color: #666;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #999999;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .button:hover {
+            background-color: #888888;
+            transform: translateY(-2px);
         }
 
         .gfm-container {
@@ -158,25 +180,32 @@
 </head>
 <body>
     <div class="footer">
-        iKilled<span class="trademark">&reg;</span>
+        ikilled<span class="trademark">&reg;</span>
     </div>
     <div class="container">
+        <img src="favicon.png" alt="Favicon">
         <h1>
             <span>Your Voice, Our Platform</span>
             <span>Unlimited Freedom.</span>
         </h1>
         <p>Coming Soon: Stay Tuned for Updates.</p>
+        <a href="#" class="button" id="donate-btn">Donate</a>
     </div>
     <div class="gfm-container" id="gfm-container">
         <span class="close-btn" id="close-btn">&times;</span>
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
     </div>
     <div class="social-text">
-        Follow us on TikTok. @ikilled.com
+        Follow us on TikTok. @ihur_app
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
-        // Removed the event listener for the donate button as it's no longer needed
+        document.getElementById('donate-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            var gfmContainer = document.getElementById('gfm-container');
+            gfmContainer.style.display = 'block';
+        });
+
         document.getElementById('close-btn').addEventListener('click', function() {
             var gfmContainer = document.getElementById('gfm-container');
             gfmContainer.style.display = 'none';
