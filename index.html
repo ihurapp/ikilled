@@ -20,59 +20,6 @@
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 700px;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .container img {
-            max-width: 400px;
-            height: auto;
-            margin-bottom: -40px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.8)); 
-            mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-        }
-
-        h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-            letter-spacing: -1.5px;
-            line-height: 1.2;
-            color: #fff;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            color: #ccc;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #000;
-            background-color: #fff;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease, transform 0.3s ease;
-            margin-bottom: 20px;
-        }
-
-        .button:hover {
-            background-color: #f0f0f0;
-            transform: translateY(-2px);
-        }
-
         .footer {
             font-size: 24px;
             font-weight: bold;
@@ -86,14 +33,6 @@
             font-size: 14px;
             vertical-align: super;
             margin-left: 2px;
-        }
-
-        .social-text {
-            position: fixed;
-            bottom: 20px;
-            left: 25px;
-            font-size: 14px;
-            color: #888;
         }
 
         /* Large font for "wallahi" */
@@ -112,20 +51,6 @@
         }
 
         @media (max-width: 767px) {
-            .container img {
-                max-width: 180px;
-            }
-
-            h1 {
-                font-size: 32px;
-                letter-spacing: -1px;
-                line-height: 1.1;
-            }
-
-            p {
-                font-size: 16px;
-            }
-
             .footer {
                 font-size: 18px;
             }
@@ -139,18 +64,6 @@
 <body>
     <div class="footer">
         ikilled<span class="trademark">&reg;</span>
-    </div>
-    <div class="container">
-        <img src="favicon.png" alt="Favicon">
-        <h1>
-            <span>Your Voice, Our Platform</span>
-            <span>Unlimited Freedom.</span>
-        </h1>
-        <p>Coming Soon: Stay Tuned for Updates.</p>
-        <a href="#" class="button" id="donate-btn">Donate</a>
-    </div>
-    <div class="social-text">
-        Follow us on TikTok.@ikilled.com
     </div>
     <div class="big-footer">wallahi.</div>
 </body>
