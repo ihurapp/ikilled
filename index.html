@@ -15,10 +15,22 @@
             color: #fff; /* White text */
             font-family: 'League Spartan', Arial, Helvetica, sans-serif;
             display: flex;
+            flex-direction: column; /* Stack elements vertically */
             justify-content: center;
             align-items: center;
             position: relative;
             overflow-x: hidden;
+        }
+
+        .top-footer {
+            font-size: 20px; /* Font size for top footer */
+            font-weight: bold;
+            color: #fff;
+            position: fixed;
+            top: 0; /* Positioned at the top */
+            left: 25px;
+            font-family: 'League Spartan', sans-serif;
+            z-index: 1000; /* Ensures it stays above other elements */
         }
 
         .footer {
@@ -26,9 +38,10 @@
             font-weight: bold;
             color: #fff;
             position: fixed;
-            top: 20px;
+            top: 20px; /* Below the top footer */
             left: 25px;
             font-family: 'League Spartan', sans-serif;
+            z-index: 999; /* Just below the top footer */
         }
 
         .footer .trademark {
@@ -62,10 +75,17 @@
                 font-size: 80px; /* Smaller on mobile for responsiveness */
                 letter-spacing: -2px; /* Reduced spacing for mobile */
             }
+
+            .top-footer {
+                font-size: 18px; /* Adjust for mobile */
+            }
         }
     </style>
 </head>
 <body>
+    <div class="top-footer">
+        Wallahi<span class="trademark">&reg;</span>
+    </div>
     <div class="footer">
         Wallahi<span class="trademark">&reg;</span>
     </div>
