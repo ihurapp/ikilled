@@ -22,7 +22,7 @@
         }
 
         .footer {
-            font-size: 20px; /* Adjusted font size to be more like Gucci's text */
+            font-size: 20px; /* Adjusted font size */
             font-weight: bold;
             color: #fff;
             position: fixed;
@@ -48,10 +48,11 @@
             width: 100%;
             margin: 0;
             padding: 10px 0;
-            letter-spacing: +21px; /* Decrease the spacing between letters */
+            letter-spacing: 10px; /* Default spacing for desktop */
             font-family: 'League Spartan', sans-serif;
         }
 
+        /* Mobile-specific styles */
         @media (max-width: 767px) {
             .footer {
                 font-size: 18px;
@@ -59,6 +60,7 @@
 
             .big-footer {
                 font-size: 80px; /* Smaller on mobile for responsiveness */
+                letter-spacing: 2px; /* Reduced spacing for mobile */
             }
         }
     </style>
