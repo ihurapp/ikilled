@@ -10,12 +10,12 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #f4f0ed;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
             position: relative;
             overflow-x: hidden;
         }
@@ -24,14 +24,14 @@
             max-width: 700px;
             padding: 20px;
             box-sizing: border-box;
-            text-align: center; /* Center the favicon image */
+            text-align: center;
         }
 
         .container img {
             max-width: 400px;
             height: auto;
             margin-bottom: -40px;
-            display: block; /* Ensures image is centered */
+            display: block;
             margin-left: auto;
             margin-right: auto;
             filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.8)); 
@@ -43,17 +43,13 @@
             margin-bottom: 20px;
             letter-spacing: -1.5px;
             line-height: 1.2;
-            text-align: left; /* Align text to the left while keeping the favicon centered */
-        }
-
-        h1 span {
-            display: block;
+            color: #fff;
         }
 
         p {
             font-size: 18px;
             margin-bottom: 40px;
-            color: #666;
+            color: #ccc;
         }
 
         .button {
@@ -61,8 +57,8 @@
             padding: 12px 24px;
             font-size: 16px;
             font-weight: bold;
-            color: #fff;
-            background-color: #999999;
+            color: #000;
+            background-color: #fff;
             border: none;
             border-radius: 30px;
             cursor: pointer;
@@ -73,46 +69,17 @@
         }
 
         .button:hover {
-            background-color: #888888;
+            background-color: #f0f0f0;
             transform: translateY(-2px);
         }
 
-        .gfm-container {
-            display: none;
-            position: fixed;
-            right: 10px;
-            bottom: 10px;
-            width: 300px;
-            height: 460px;
-            background-color: #f9f9f9;
-            padding: 8px;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            overflow: hidden;
-        }
-
-        .gfm-container .close-btn {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            font-size: 35px;
-            cursor: pointer;
-            color: #333;
-        }
-
         .footer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
             position: fixed;
             top: 20px;
             left: 25px;
-            font-size: 24px; /* Default font size for larger screens */
-            font-weight: bold; /* Font weight */
-            color: #333; /* Text color */
-            display: flex;
-            align-items: center;
-            text-transform: lowercase; /* Optional: Transform text to lowercase */
-            letter-spacing: 1px; /* Optional: Adjust letter spacing */
-            font-family: 'Helvetica Neue', sans-serif; /* Font family */
         }
 
         .footer .trademark {
@@ -126,8 +93,22 @@
             bottom: 20px;
             left: 25px;
             font-size: 14px;
-            color: #666;
-            z-index: 1000;
+            color: #888;
+        }
+
+        /* Large font for "wallahi" */
+        .big-footer {
+            font-size: 50px; /* Adjust size as needed */
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            text-transform: lowercase;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            padding: 20px 0;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 767px) {
@@ -147,33 +128,10 @@
 
             .footer {
                 font-size: 18px;
-                left: 20px;
             }
 
-            .social-text {
-                font-size: 13px;
-                left: 20px;
-            }
-
-            .gfm-container {
-                position: fixed;
-                top: 50px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 90vw;
-                height: 450px;
-                padding: 10px;
-            }
-        }
-
-        /* Media query for larger screens */
-        @media (min-width: 768px) {
-            .footer {
-                font-size: 20px; /* Smaller font size for larger screens */
-            }
-
-            .footer .trademark {
-                font-size: 12px; /* Smaller trademark */
+            .big-footer {
+                font-size: 36px;
             }
         }
     </style>
@@ -191,26 +149,9 @@
         <p>Coming Soon: Stay Tuned for Updates.</p>
         <a href="#" class="button" id="donate-btn">Donate</a>
     </div>
-    <div class="gfm-container" id="gfm-container">
-        <span class="close-btn" id="close-btn">&times;</span>
-        <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
-    </div>
     <div class="social-text">
         Follow us on TikTok.@ikilled.com
     </div>
-    <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-    <script>
-        document.getElementById('donate-btn').addEventListener('click', function(event) {
-            event.preventDefault();
-            var gfmContainer = document.getElementById('gfm-container');
-            gfmContainer.style.display = 'block';
-        });
-
-        document.getElementById('close-btn').addEventListener('click', function() {
-            var gfmContainer = document.getElementById('gfm-container');
-            gfmContainer.style.display = 'none';
-        });
-    </script>
+    <div class="big-footer">wallahi.</div>
 </body>
 </html>
-
