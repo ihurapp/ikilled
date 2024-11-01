@@ -54,9 +54,9 @@
             align-items: center;
         }
 
-        /* Black background with higher gradient fade for bottom "Wallahi" text */
+        /* Black background for bottom "Wallahi" text with minimal fade */
         .big-footer {
-            background: linear-gradient(to top, #000, rgba(0, 0, 0, 0) 20%); /* Black fading to transparent */
+            background: linear-gradient(to top, #000 90%, rgba(0, 0, 0, 0.5) 98%, #fff 100%);
             color: #fff; /* White text */
             font-size: 250px;
             font-weight: normal;
@@ -65,7 +65,7 @@
             bottom: 0;
             width: 100%;
             margin: 0;
-            padding: 250px 0; /* Increased padding to extend black background higher */
+            padding: 30px 0; /* Keeps "Wallahi" in the same place */
             letter-spacing: -2px;
             font-family: 'League Spartan', sans-serif;
         }
@@ -79,7 +79,7 @@
             .big-footer {
                 font-size: 80px;
                 letter-spacing: -2px;
-                padding: 60px 0;
+                padding: 20px 0;
             }
         }
     </style>
@@ -95,7 +95,7 @@
         <!-- Main content goes here, if any -->
     </div>
 
-    <!-- Black background "Wallahi" text at the bottom with extended fade effect -->
+    <!-- Black background "Wallahi" text at the bottom with reduced fade -->
     <div class="big-footer">Wallahi.</div>
 </body>
 </html>
